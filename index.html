@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Galeria de mulheres bonitas e suas imagens inspiradoras.">
+        <meta name="keywords" content="mulheres, bonitas, imagens, beleza, fashion, mulheres incríveis">
+        <meta name="author" content="Seu Nome ou Empresa">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mulheres Bonitas - Galeria de Beleza</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: black;
+                align-items: center;
+                text-align: center;
+                color:white;
+            }
+            img {
+                margin: 10px;
+                max-width: 100%; /* Faz com que as imagens se ajustem à largura da tela */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="ok"></div>
+        <script>
+            const linkimagem = [
+                "https://i.pinimg.com/236x/e9/08/ca/e908ca977edfec4cfe418851dae73edc.jpg", 
+                "https://i.pinimg.com/75x75_RS/51/cd/2c/51cd2c55f57f16a983e8beae6030a5b6.jpg", 
+                "https://i.pinimg.com/236x/a9/d1/96/a9d1966a9e2b8284c0cdf9334ac96c01.jpg", 
+                "https://i.pinimg.com/236x/5a/c9/8a/5ac98a0eeb085eda77aed4f59c4394d1.jpg", 
+                "https://i.pinimg.com/236x/4d/e7/3a/4de73a1bd47b8063623309b84ccdf69e.jpg", 
+                "https://i.pinimg.com/236x/ab/b6/48/abb648b69815ee958cbb74053f01ab04.jpg", 
+                "https://i.pinimg.com/236x/69/c4/da/69c4da2b8c4742b5e6c5b0d80273b5d3.jpg", 
+                "https://i.pinimg.com/236x/ae/cf/62/aecf629749f73fc48bc80d3e8a21a3bc.jpg", 
+                "https://i.pinimg.com/236x/a0/73/17/a07317d11df338fdc0a8bdbe4e31d66b.jpg", 
+                "https://i.pinimg.com/236x/49/2f/49/492f49024f84629c5c679a2780fea505.jpg", 
+                "https://i.pinimg.com/236x/f8/62/a9/f862a9a40a6cc7bd2a891b6641bae15c.jpg", 
+                "https://i.pinimg.com/236x/e9/08/ca/e908ca977edfec4cfe418851dae73edc.jpg", 
+                "https://i.pinimg.com/75x75_RS/51/cd/2c/51cd2c55f57f16a983e8beae6030a5b6.jpg", 
+                "https://i.pinimg.com/236x/a9/d1/96/a9d1966a9e2b8284c0cdf9334ac96c01.jpg", 
+                "https://i.pinimg.com/236x/5a/c9/8a/5ac98a0eeb085eda77aed4f59c4394d1.jpg", 
+                "https://i.pinimg.com/236x/4d/e7/3a/4de73a1bd47b8063623309b84ccdf69e.jpg", 
+                "https://i.pinimg.com/236x/ab/b6/48/abb648b69815ee958cbb74053f01ab04.jpg", 
+                "https://i.pinimg.com/236x/69/c4/da/69c4da2b8c4742b5e6c5b0d80273b5d3.jpg", 
+                "https://i.pinimg.com/236x/ae/cf/62/aecf629749f73fc48bc80d3e8a21a3bc.jpg", 
+                "https://i.pinimg.com/236x/a0/73/17/a07317d11df338fdc0a8bdbe4e31d66b.jpg", 
+                "https://i.pinimg.com/236x/49/2f/49/492f49024f84629c5c679a2780fea505.jpg", 
+                "https://i.pinimg.com/236x/f8/62/a9/f862a9a40a6cc7bd2a891b6641bae15c.jpg", 
+                "https://i.pinimg.com/236x/e9/08/ca/e908ca977edfec4cfe418851dae73edc.jpg", 
+                "https://i.pinimg.com/75x75_RS/cc/c7/d7/ccc7d7eb121b9f200ed0fe1d72da4274.jpg", 
+                "https://i.pinimg.com/236x/11/4a/b8/114ab8cb75e1afaf1f7f0e32d9df190a.jpg", 
+                "https://i.pinimg.com/236x/4c/d8/83/4cd88342e49fd518c946f561874ccd90.jpg", 
+                "https://i.pinimg.com/236x/b9/9e/63/b99e63e6b9f5d6fa186dd962199104a5.jpg", 
+                "https://i.pinimg.com/236x/f1/31/98/f13198b2f577abb14d30faf8cf9af6a3.jpg", 
+                "https://i.pinimg.com/236x/07/c1/0c/07c10c24538cb1c05822082c6eae03c5.jpg", 
+                "https://i.pinimg.com/236x/dd/57/cc/dd57cc96b5a60585318e1164e3a9ebac.jpg", 
+                "https://i.pinimg.com/236x/a7/8f/18/a78f1871884971c8a1489edb0cf6a189.jpg", 
+                "https://i.pinimg.com/236x/7f/98/b6/7f98b69cfa7d5a0daf8d95299b73373d.jpg", 
+                "https://i.pinimg.com/236x/75/53/05/75530526c5b177c32672a159eb6de320.jpg", 
+                "https://i.pinimg.com/236x/80/47/d2/8047d246f6ffb7e7c84f0fc9c8179344.jpg"
+            ];
 
+            linkimagem.forEach(imagem => {
+                const tagimg = document.createElement('img');
+                tagimg.src = imagem;
+                tagimg.alt = "Imagem dinâmicas";
+
+                const p = document.createElement('p');
+                p.innerHTML = 'SEGUROS 027 99949-7001<br><a href="https://victorxx.github.io/VPSVENDA/contatoroberto.html">CONTATO CORRETOR</a><br><br><br> CRÉDITO PESSOAL-> <a href="https://www.geocredibnk.com.br/" target="_blank">Crédito pessoal</a><br><br><a href="https://victorxx.github.io/relexao01git/">VAMOS RIR</a>';
+
+                const container = document.createElement('div');
+                container.appendChild(tagimg);
+                container.appendChild(p);
+
+                document.getElementById('ok').appendChild(container);
+            });
+        </script>
+    </body>
+</html>
